@@ -23,9 +23,8 @@ ifdef OPERATION
 NASM_FLAGS+= -DOPERATION='$(OPERATION)'
 endif
 
-
-ifndef OUTPUT_FILE
-OUTPUT_FILE=$(BIN_DIR)/$(EXE_NAME)
+ifndef OUTPUT
+OUTPUT=$(BIN_DIR)/$(EXE_NAME)
 endif
 
 #executables will be saved here
@@ -35,8 +34,8 @@ INC_PATH =$(addprefix $(INC_DIR)/,$(INC_FILES) )
 SRC_PATH =$(addprefix $(SRC_DIR)/,$(SRC_FILES) ) 
 
 all: $(BIN_DIR)
-	$(CC) $(SRC_PATH) -o $(OUTPUT_FILE) $(NASM_FLAGS)
-	chmod +x $(OUTPUT_FILE)
+	$(CC) $(SRC_PATH) -o $(OUTPUT) $(NASM_FLAGS)
+	chmod +x $(OUTPUT)
 
 emit:
 	$(CC) $(SRC_PATH) -E $(NASM_FLAGS)
