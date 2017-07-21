@@ -16,7 +16,8 @@ Note that you can easily change `include/expand_asm.h` to suit your needs.
 number of operations that you want to generate with the option 
 `N_OPS=<number>`. You can also define the operation that you want to 
 generate `<number>` times with the option `OPERATION="<my_operation>"`.
-The default behavior (just `make`) is to generate one `add eax,1` instruction
+The default behavior (just `make`) is to generate one `add eax,1` instruction.
+`OUTPUT=path` controls where the output file is produced. the default is `./bin/test_exec`
 
 ## An Example
 
