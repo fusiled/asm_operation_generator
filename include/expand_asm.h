@@ -82,6 +82,10 @@
 	N_OPS_260416
 	N_OPS_260416
 %endmacro
+%macro N_OPS_1041664 0
+        N_OPS_520832
+        N_OPS_520832
+%endmacro
 %macro N_OPS_1000000 0
 	N_OPS_520832
 	N_OPS_260416
